@@ -22,10 +22,21 @@ function calculate() {
 }
 
 
+function swapCurrencies() {
+  // const temp = currencyElOne.value;
+  // currencyElOne.value = currencyElTwo.value;
+  // currencyElTwo.value = temp;
+  [currencyElOne.value, currencyElTwo.value] = [currencyElTwo.value, currencyElOne.value]
+  
+  calculate();
+}
+
 
 // Event Listeners
 currencyElOne.addEventListener('change', calculate);
 amountElOne.addEventListener('input', calculate);
 currencyElTwo.addEventListener('change', calculate);
+amountElTwo.addEventListener('input', calculate);
+swap.addEventListener('click', swapCurrencies);
 
 calculate();
