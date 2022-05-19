@@ -48,7 +48,7 @@ p {
   padding: 40px 0;
   display: flex;
   align-items: center;
-  justify-items: space-between;
+  justify-content: space-between;
 }
 
 .currency select {
@@ -91,6 +91,14 @@ button:focus {
 }
 
 @media (max-width: 600px) {
+  h1 {
+    font-size: 1.35em;
+  }
+
+  p {
+    max-width: 330px;
+  }
+
   .currency input {
     width: 200px;
   }
